@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    请查看源代码更改数据
+</body>
+<script>
+    var arr=[1,1,1,2,3,4,3,2];
+    // console.log(arr.indexOf(2));
+    for(var i=0;i<arr.length;i++){
+        if(arr.indexOf(arr[i],i+1)!=-1){
+            arr.splice(i,1);
+        } 
+    }
+    console.log(arr);
+</script>
+</html>

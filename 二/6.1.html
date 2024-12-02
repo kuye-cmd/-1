@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    请查看源代码更改数据
+    <a href="./6.2.html">第二种</a>
+</body>
+<script>
+    var arr=[1,1,1,2,3,4,3,2];
+    var arr1=[]
+    for(var i=0;i<arr.length;i++){
+        if(arr1.indexOf(arr[i])===-1){
+            arr1.push(arr[i])
+        }
+    }
+    console.log(arr1);
+</script>
+</html>

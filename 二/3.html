@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    请查看源代码更改数据
+</body>
+<script>
+    var str="Let's take LeetCode contest";
+    var arr=str.split(" ");
+    var a="";
+    for(var i=0;i<arr.length/2;i++){
+        a=arr[i];
+        arr[i]=arr[arr.length-i-1];
+        arr[arr.length-1-i]=a;
+    }
+    str=""
+    for(var j=0;j<arr.length;j++){
+        str+=arr[j]+" ";
+    }
+    alert(str)
+</script>
+</html>

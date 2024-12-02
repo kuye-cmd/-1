@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    请查看源代码更改数据
+</body>
+<script>
+    var arr=[3,5,6,7,2,4]
+    findSecondLargest(arr);
+    function findSecondLargest(arr){
+        arr=arr.sort();
+        var max=Math.max(...arr);
+        // console.log(max);
+        for(var i=arr.length-2;i>=0;i--){
+            if (arr[i]===max) {
+                alert('null')
+                break;
+            }
+            if (arr[i]<max) {
+                alert(arr[i]);
+                break;
+            }
+        }
+        console.log(i);
+        
+        if(i<0){
+            alert("null")
+        }
+    }
+</script>
+</html>
