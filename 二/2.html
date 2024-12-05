@@ -9,27 +9,32 @@
     请查看源代码更改数据
 </body>
 <script>
-    var str='([)';
+    var str='()';
+    var str1=''
     var a=0,b=0,c=0;
-    for(var i=0;i<str.length;i++){
-        if (str[i]==='(') {
+    // console.log(str.splice(0,1));
+    str[0]=1;
+    console.log(str);
+    
+    for(var i=0;i<str.length/2;i++){
+        if (str[i]===' ') {
+            continue;
+        }
+        if (str[i]==='(' && str.indexOf(')')!=-1) {
+            str[i]=' '
+            str[str.indexOf(')')]=' ';
             a++;
-        }else if(str[i]==="["){
+        }else if(str[i]==="[" && str.indexOf(')')!=-1){
+        str[i]=' '
+            str[str.indexOf(']')]=' '
             b++;
-        }else if(str[i]==="{"){
+        }else if(str[i]==="{" && str.indexOf(')')!=-1){
+            str[i]=' '
+            str[str.indexOf('}')]=' '
             c++;
-        }else if(str[i]===")"){
-            a--;
-        }else if(str[i]==="]"){
-            b--;
-        }else if(str[i]==="}"){
-            c--;
         }
     }
-    if (a===0 && b===0 && c===0) {
-        alert('true')
-    } else {
-        alert('false')
-    }
+    console.log(str);
+    
 </script>
 </html>

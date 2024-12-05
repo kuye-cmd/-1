@@ -9,34 +9,101 @@ ul li {
 a{
     direction: none;
 }
+/* 清除浮动 */
+.clearfix::after{
+    content: "";
+    height: 0;
+    width: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
 
+
+/* 头部 */
 .head{
     width: 1110px;
     height: 38px;
-}
-
-.head ul{
-    height: 38px;
+    padding: 10px 0;
+    margin: 0 auto 0;
     display: flex;
     justify-content: space-between;
 }
 
-.head li{
-    width: 64px;
+.head .left{
+    margin-bottom: -30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.head .left .log{
+    width: 93px;
     height: 38px;
+    margin: 0 0;
+}
+
+/* logo */
+.navbar-logo .logo-primary {
+    fill: #2c8ebb;
+    cursor: pointer;
+}
+.logo-secondary{
+    fill: white;
+    cursor: pointer;
+}
+
+.head .left ul{
+    height: 38px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+
+.head .left ul li{
+    /* width: 64px; */
+    height: 38px;
+    line-height: 35px;
+    margin-left: 20px;
+    font-size: 17px;
+    color: #666666;
+    cursor: pointer;
+}
+
+.head .right ul{
+    line-height: 44px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.head .right ul li{
+    margin-left: 15px;
+}
+
+.head .right svg{
+    width: 25px;
+    height: 25px;
+}
+
+.navbar-icon path {
+    fill: rgba(0, 0, 0, 0.6);
 }
 
 .banner {
-    height: 408px;
+    padding-top: 10px;
+    height: 398px;
     background-color: #2188B6;
 }
 
+/* 中间蓝色部分的布局 */
 .banner .int {
     width: 1110px;
     font-size: 75px;
+    line-height: 90px;
     font-weight: 900;
-    margin: 0 auto;
+    margin: 10px auto 0;
     color: #fff;
+    text-shadow:6px 5px 0px #1476A2
 }
 
 .banner .btn{
@@ -44,7 +111,7 @@ a{
     margin: 20px auto 0;
 }
 
-.banner .btn button{
+.banner .btn button:nth-child(-n + 3){
     width: 230px;
     height: 64px;
     margin-right: 20px;
@@ -53,6 +120,24 @@ a{
     color: white;
     background-color: rgba(0,0,0,0);
     border: 2px rgba(0,0,0,0.2) solid;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.banner .btn button:nth-last-child(-n+2){
+    width: 60px;
+    height: 28px;
+    line-height: 12px;
+    padding: 4px 2px;
+    border-radius: 2px;
+    border: none;
+    font-weight: 700;
+}
+
+.banner .btn button:hover{
+    background-color: rgba(255,255,255,1);
+    border: 2px rgba(255,255,255,1) solid;
+    color: #2188B6;
 }
 
 .banner .btn button:first-child{
@@ -68,14 +153,16 @@ a{
 }
 
 .banner .versions p{
-    font-size: 21px;
+    margin-top: 15px;
+    font-size: 16px;
     color: white;
 }
 
 .banner .versions p a{
     color: white;
 }
-
+/* 中间蓝色部分结束 */
+/* 中间以及下下面的简介开始 */
 .banner .cont {
     width: 1110px;
     margin: 60px auto 0;
@@ -83,7 +170,7 @@ a{
 
 .banner .cont .speed{
     /* width: 11px; */
-    height: 256px;
+    /* height: 256px; */
 }
 
 .banner .cont .speed .left {
@@ -96,7 +183,7 @@ a{
 .banner .cont .speed .left h2,
 .banner .cont .fasety h2,
 .banner .cont .rel h2{
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 100;
     margin-top: 90px;
     width: 617px;
@@ -105,19 +192,20 @@ a{
 .banner .cont .speed .left p,
 .banner .cont .fasety p,
 .banner .cont .rel p{
-    font-size: 25px;
+    font-size: 21px;
+    font-weight: 100;
     margin-top: 20px;
     width: 617px;
 }
 
 .banner .cont .fasety{
-    height: 262px;
+    /* height: 262px; */
     color:#5A5A5A;
 }
 
 .banner .cont .rel {
     color:#5A5A5A;
-    height: 260px;
+    /* height: 260px; */
 }
 
 .banner .cont img{
@@ -131,7 +219,10 @@ a{
 .banner .cont .right {
     float: right;
 }
+/* 中间以及下下面的简介结束 */
 
+
+/* 底部部分开始 */
 .banner .wait {
     height: 128px;
     background-color: #2188B6;
@@ -142,12 +233,15 @@ a{
     display: flex;
     justify-content: space-between;
     padding: 32px 0;
+    margin: 0 auto; width: 1110px;
 }
 
 .banner .wait div p{
-    font-size: 40px;
+    font-size: 48px;
+    font-weight: 700;
     line-height: 64px;
     color: white;
+    text-shadow:5px 5px 0px #1476A2
 }
 
 .banner .wait div button {
@@ -158,12 +252,19 @@ a{
     font-size: 21px;
     font-weight: 600;
     color: white;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
 }
+.banner .wait div button:hover{
+    background-color: rgba(255,255,255,1);
+    border: 2px rgba(255,255,255,1) solid;
+    color: #2188B6;
+}
+
 
 .banner .funtion {
     width: 1110px;
     height: 352px;
-    /* padding: 0 15px; */
     margin: 0 auto;
 }
 
@@ -205,4 +306,18 @@ a{
 .end a{
     color: skyblue;
     text-decoration: none;
+}
+
+
+@media (max-width: 1200px){
+    .banner .wait div,.head,.banner .int ,.banner .btn,.banner .versions,.banner .cont,.banner .funtion,.end {
+        width: 930px;
+    }
+
+}
+
+@media (max-width: 931px){
+    .banner .wait div,.head,.banner .int ,.banner .btn,.banner .versions,.banner .cont,.banner .funtion,.end {
+        width: 720px;
+    }
 }

@@ -9,8 +9,17 @@
     
 </body>
 <script>
-    function replaceString(){
-
+    var str="hello word",str1="word",str2="three";
+    replaceString(str,str1,str2)
+    function replaceString(str,str1,str2){
+        var arr=str.split(" ");
+        console.log(arr);  
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i]===str1) {
+                arr.splice(i,1,str2)  
+            }
+        }
+        console.log(arr);
     }
 </script>
 </html>
